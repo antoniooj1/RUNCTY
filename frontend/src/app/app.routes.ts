@@ -26,5 +26,10 @@ export const routes: Routes = [
   { path: 'corredores/:id/editar', loadComponent: () => import('./paginas/corredores/corredor-form.page').then((m) => m.CorredorFormPage) },
 
   { path: 'evaluaciones', loadComponent: () => import('./paginas/evaluaciones.page').then((m) => m.EvaluacionesPage) },
+  { path: 'consentimientos', loadComponent: () => import('./paginas/consentimientos/consentimiento-lista.page').then((m) => m.ConsentimientoListaPage) },
+  { path: 'consentimientos/nuevo', loadComponent: () => import('./paginas/consentimientos/consentimiento-form.page').then((m) => m.ConsentimientoFormPage) },
+  { path: 'consentimientos/:id', loadComponent: () => import('./paginas/consentimientos/consentimiento-detalle.page').then((m) => m.ConsentimientoDetallePage) },
+
+  { path: 'evaluaciones/:id', loadComponent: () => import('./paginas/evaluaciones/evaluacion-detalle.page').then((m) => m.EvaluacionDetallePage) },
   { path: '**', redirectTo: 'inicio' },
 ];

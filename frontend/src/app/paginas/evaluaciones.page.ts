@@ -18,7 +18,7 @@ import { RunctyApi, mensajeError } from '../core/runcty-api.service';
       @if (estado.evaluaciones.error$ | async; as error) { <ion-text color="danger"><p>{{ error }}</p></ion-text> }
       <ion-list>
         @for (e of (estado.evaluaciones.datos$ | async) ?? []; track e.id) {
-          <ion-item>
+          <ion-item [routerLink]="['/evaluaciones', e.id]" detail>
             <ion-label>
               <h2>{{ e.ruta_nombre }}</h2>
               <p>Salida {{ e.hora_salida.slice(0, 5) }} · calculado {{ e.fecha_utc | date: 'short' }}</p>
