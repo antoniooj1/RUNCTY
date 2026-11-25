@@ -1,0 +1,4 @@
+GET  /api/zonas/      -> 303
+GET  /api/zonas/999/  -> 303
+  <- POST zona vacía  -> 303
+  <- recomendar inválido -> 303

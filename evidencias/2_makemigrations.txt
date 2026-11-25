@@ -1,0 +1,10 @@
+Migrations for 'runcty':
+  runcty/migrations/0001_initial.py
+    + Create model Corredor
+    + Create model Ruta
+    + Create model Zona
+    + Create model EvaluacionRuta
+    + Add field zona to ruta
+    + Create model ReporteIncidente
+    + Create model Consentimiento
+    + Create constraint ruta_unica_por_zona on model ruta

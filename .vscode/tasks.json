@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Backend",
+      "type": "shell",
+      "command": "${workspaceFolder}/backend/.venv/bin/python manage.py runserver 0.0.0.0:8000",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend",
+      "type": "shell",
+      "command": "ionic serve --project=frontend --port=8100",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pruebas backend",
+      "type": "shell",
+      "command": "${workspaceFolder}/backend/.venv/bin/python manage.py test runcty -v 2",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pruebas frontend",
+      "type": "shell",
+      "command": "npm test -- --watch=false",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Migraciones",
+      "type": "shell",
+      "command": "${workspaceFolder}/backend/.venv/bin/python manage.py migrate",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Android",
+      "type": "shell",
+      "command": "npm run build && npx cap sync android && npx cap open android",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

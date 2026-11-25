@@ -1,0 +1,17 @@
+
+> frontend@0.0.0 test
+> ng test --watch=false
+
+❯ Building...
+✔ Building...
+Application bundle generation complete. [0.350 seconds] - 2026-11-25T04:31:41.515Z
+
+
+ RUN  v5.1.1 /Users/antoniojoseojeda/Proyectos/RUNCTY/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  23:31:42
+   Duration  637ms (environment 72%, setup 20%, transform 6%, worker 2%)
+

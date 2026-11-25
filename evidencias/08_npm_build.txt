@@ -1,0 +1,38 @@
+
+> frontend@0.0.0 build
+> ng build
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names                 |  Raw size | Estimated transfer size
+main-N7RZ2VZO.js    | main                  | 930.72 kB |               173.40 kB
+chunk-BgdJ41wt.js   | -                     |  39.28 kB |                13.47 kB
+styles-3K57INKN.css | styles                |  13.85 kB |                 2.89 kB
+chunk-EmdwnXrI.js   | -                     |   3.09 kB |                 1.21 kB
+chunk-TmdwHrdN.js   | -                     | 727 bytes |               727 bytes
+chunk-C-Yue-Ew.js   | -                     | 555 bytes |               555 bytes
+
+                    | Initial total         | 988.21 kB |               192.26 kB
+
+Lazy chunk files    | Names                 |  Raw size | Estimated transfer size
+chunk-CNDhazoB.js   | -                     |   9.77 kB |                 3.61 kB
+chunk-CC3Kb2W-.js   | ruta-form-page        |   5.38 kB |                 1.72 kB
+chunk-YY9skzQx.js   | p-CGPlqk2U            |   4.91 kB |                 1.97 kB
+chunk-CfNAFIqf.js   | recomendar-page       |   4.58 kB |                 1.87 kB
+chunk-B4I3D50i.js   | reporte-form-page     |   4.07 kB |                 1.53 kB
+chunk-s9XoEiPL.js   | corredor-detalle-page |   3.83 kB |                 1.53 kB
+chunk-6XRFclg9.js   | ruta-lista-page       |   3.68 kB |                 1.58 kB
+chunk-Qe_zaJmX.js   | reporte-lista-page    |   3.43 kB |                 1.50 kB
+chunk-CimpU-6M.js   | ruta-detalle-page     |   2.90 kB |                 1.33 kB
+chunk-D1VQzamc.js   | corredor-lista-page   |   2.81 kB |                 1.26 kB
+chunk-CUnrwmKj.js   | zona-lista-page       |   2.59 kB |                 1.20 kB
+chunk-Bpl4Oy2_.js   | zona-detalle-page     |   2.36 kB |                 1.09 kB
+chunk-BtvxY4Qh.js   | reporte-detalle-page  |   2.07 kB |                 1.04 kB
+chunk-QMQbb2WC.js   | corredor-form-page    |   2.02 kB |                 1.01 kB
+chunk-Csplftax.js   | zona-form-page        |   1.99 kB |                 1.00 kB
+...and 14 more lazy chunks files. Use "--verbose" to show all the files.
+
+Application bundle generation complete. [1.846 seconds] - 2026-11-25T04:33:18.846Z
+
+Output location: /Users/antoniojoseojeda/Proyectos/RUNCTY/frontend/dist/frontend
+

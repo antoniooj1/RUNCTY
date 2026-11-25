@@ -1,0 +1,21 @@
+{
+  "datos_runcty_preservados": {
+    "runcty.corredor": 2,
+    "runcty.zona": 2,
+    "runcty.ruta": 5
+  },
+  "retos_conteos_sin_cambios": {
+    "retos_avance": 1,
+    "retos_reto": 2,
+    "retos_tareasemanal": 21
+  },
+  "tablas_runcty_retiradas": [
+    "runcty_consentimiento",
+    "runcty_corredor",
+    "runcty_evaluacionruta",
+    "runcty_reporteincidente",
+    "runcty_ruta",
+    "runcty_zona"
+  ],
+  "respaldos_privados": ".local/respaldo/"
+}

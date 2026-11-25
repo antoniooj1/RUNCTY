@@ -1,0 +1,1 @@
+48 peticiones HTTP verificadas; códigos 200, 201, 204, 400, 404 y 405 correctos. Registros temporales eliminados.

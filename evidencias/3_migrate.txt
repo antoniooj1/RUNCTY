@@ -1,0 +1,4 @@
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, runcty, sessions
+Running migrations:
+  Applying runcty.0001_initial... OK

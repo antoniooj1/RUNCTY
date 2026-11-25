@@ -1,0 +1,19 @@
+Servidor MySQL 8.4, puerto 3307
+Base: runcty | Usuario: runcty_app@127.0.0.1
+SHOW TABLES;
+auth_group
+auth_group_permissions
+auth_permission
+auth_user
+auth_user_groups
+auth_user_user_permissions
+django_admin_log
+django_content_type
+django_migrations
+django_session
+runcty_consentimiento
+runcty_corredor
+runcty_evaluacionruta
+runcty_reporteincidente
+runcty_ruta
+runcty_zona

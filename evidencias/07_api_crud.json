@@ -1,0 +1,1141 @@
+[
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/zonas/",
+    "enviado": {
+      "nombre": "Verificación 233705"
+    },
+    "codigo": 201,
+    "respuesta": {
+      "id": 6,
+      "nombre": "Verificación 233705",
+      "total_rutas": 0
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/corredores/",
+    "enviado": {
+      "alias": "Verificación 233705"
+    },
+    "codigo": 201,
+    "respuesta": {
+      "id": 5,
+      "alias": "Verificación 233705",
+      "consentimiento_vigente": false
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/rutas/",
+    "enviado": {
+      "zona": 6,
+      "nombre": "Ruta de prueba",
+      "km": "5.00",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    },
+    "codigo": 201,
+    "respuesta": {
+      "id": 8,
+      "zona": 6,
+      "zona_nombre": "Verificación 233705",
+      "nombre": "Ruta de prueba",
+      "km": "5.00",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/zonas/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "count": 3,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": 1,
+          "nombre": "Jipiro",
+          "total_rutas": 4
+        },
+        {
+          "id": 2,
+          "nombre": "La Tebaida",
+          "total_rutas": 1
+        },
+        {
+          "id": 6,
+          "nombre": "Verificación 233705",
+          "total_rutas": 1
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/zonas/6/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "id": 6,
+      "nombre": "Verificación 233705",
+      "total_rutas": 1
+    }
+  },
+  {
+    "metodo": "PATCH",
+    "url": "http://127.0.0.1:8000/api/zonas/6/",
+    "enviado": {
+      "nombre": "Zona editada 233705"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 6,
+      "nombre": "Zona editada 233705",
+      "total_rutas": 1
+    }
+  },
+  {
+    "metodo": "PUT",
+    "url": "http://127.0.0.1:8000/api/zonas/6/",
+    "enviado": {
+      "nombre": "Zona editada 233705"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 6,
+      "nombre": "Zona editada 233705",
+      "total_rutas": 1
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/corredores/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "count": 3,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": 1,
+          "alias": "Corredor demo A",
+          "consentimiento_vigente": false
+        },
+        {
+          "id": 2,
+          "alias": "Corredor demo B",
+          "consentimiento_vigente": false
+        },
+        {
+          "id": 5,
+          "alias": "Verificación 233705",
+          "consentimiento_vigente": false
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/corredores/5/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "id": 5,
+      "alias": "Verificación 233705",
+      "consentimiento_vigente": false
+    }
+  },
+  {
+    "metodo": "PATCH",
+    "url": "http://127.0.0.1:8000/api/corredores/5/",
+    "enviado": {
+      "alias": "Corredor editado 233705"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 5,
+      "alias": "Corredor editado 233705",
+      "consentimiento_vigente": false
+    }
+  },
+  {
+    "metodo": "PUT",
+    "url": "http://127.0.0.1:8000/api/corredores/5/",
+    "enviado": {
+      "alias": "Corredor editado 233705"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 5,
+      "alias": "Corredor editado 233705",
+      "consentimiento_vigente": false
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/rutas/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "count": 6,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": 1,
+          "zona": 1,
+          "zona_nombre": "Jipiro",
+          "nombre": "Circuito del parque",
+          "km": "4.70",
+          "desnivel": 22,
+          "superficie": "Pavimento",
+          "dificultad": "Baja",
+          "iluminacion": 85,
+          "afluencia": 80,
+          "apoyo": 70,
+          "incidentes_base": 1
+        },
+        {
+          "id": 2,
+          "zona": 1,
+          "zona_nombre": "Jipiro",
+          "nombre": "Vuelta junto al río",
+          "km": "5.00",
+          "desnivel": 35,
+          "superficie": "Mixta",
+          "dificultad": "Media",
+          "iluminacion": 65,
+          "afluencia": 70,
+          "apoyo": 50,
+          "incidentes_base": 0
+        },
+        {
+          "id": 3,
+          "zona": 1,
+          "zona_nombre": "Jipiro",
+          "nombre": "Recorrido del sector norte",
+          "km": "5.30",
+          "desnivel": 44,
+          "superficie": "Pavimento",
+          "dificultad": "Media",
+          "iluminacion": 52,
+          "afluencia": 45,
+          "apoyo": 60,
+          "incidentes_base": 2
+        },
+        {
+          "id": 4,
+          "zona": 1,
+          "zona_nombre": "Jipiro",
+          "nombre": "Ruta larga de Jipiro",
+          "km": "8.20",
+          "desnivel": 80,
+          "superficie": "Mixta",
+          "dificultad": "Alta",
+          "iluminacion": 45,
+          "afluencia": 40,
+          "apoyo": 35,
+          "incidentes_base": 1
+        },
+        {
+          "id": 5,
+          "zona": 2,
+          "zona_nombre": "La Tebaida",
+          "nombre": "Circuito de La Tebaida",
+          "km": "3.90",
+          "desnivel": 30,
+          "superficie": "Pavimento",
+          "dificultad": "Baja",
+          "iluminacion": 75,
+          "afluencia": 66,
+          "apoyo": 60,
+          "incidentes_base": 1
+        },
+        {
+          "id": 8,
+          "zona": 6,
+          "zona_nombre": "Zona editada 233705",
+          "nombre": "Ruta de prueba",
+          "km": "5.00",
+          "desnivel": 25,
+          "superficie": "Mixta",
+          "dificultad": "Baja",
+          "iluminacion": 80,
+          "afluencia": 70,
+          "apoyo": 60,
+          "incidentes_base": 0
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/rutas/8/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "id": 8,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "nombre": "Ruta de prueba",
+      "km": "5.00",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    }
+  },
+  {
+    "metodo": "PATCH",
+    "url": "http://127.0.0.1:8000/api/rutas/8/",
+    "enviado": {
+      "nombre": "Ruta editada"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 8,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "nombre": "Ruta editada",
+      "km": "5.00",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    }
+  },
+  {
+    "metodo": "PUT",
+    "url": "http://127.0.0.1:8000/api/rutas/8/",
+    "enviado": {
+      "zona": 6,
+      "nombre": "Ruta PUT",
+      "km": "5.00",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 8,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "nombre": "Ruta PUT",
+      "km": "5.00",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/zonas/",
+    "enviado": {
+      "nombre": ""
+    },
+    "codigo": 400,
+    "respuesta": {
+      "nombre": [
+        "Este campo no puede estar en blanco."
+      ]
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/corredores/",
+    "enviado": {
+      "alias": "a"
+    },
+    "codigo": 400,
+    "respuesta": {
+      "alias": [
+        "El alias debe tener al menos 3 caracteres."
+      ]
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/rutas/",
+    "enviado": {
+      "zona": 6,
+      "nombre": "Ruta de prueba",
+      "km": "-1",
+      "desnivel": 25,
+      "superficie": "Mixta",
+      "dificultad": "Baja",
+      "iluminacion": 80,
+      "afluencia": 70,
+      "apoyo": 60,
+      "incidentes_base": 0
+    },
+    "codigo": 400,
+    "respuesta": {
+      "km": [
+        "Asegúrese de que este valor es mayor o igual a 0.1."
+      ]
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/reportes/",
+    "enviado": {
+      "autor": 5,
+      "zona": 6,
+      "tipo": "OBSTACULO",
+      "ubicacion": "Entrada de prueba, sin ubicación personal"
+    },
+    "codigo": 400,
+    "respuesta": {
+      "autor": [
+        "El corredor debe aceptar el consentimiento de ubicación antes de reportar."
+      ]
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/consentimientos/",
+    "enviado": {
+      "corredor": 5
+    },
+    "codigo": 201,
+    "respuesta": {
+      "id": 3,
+      "corredor": 5,
+      "corredor_alias": "Corredor editado 233705",
+      "version": "1.0-demo",
+      "fecha_utc": "2026-11-24T23:37:05.301155-05:00"
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/consentimientos/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "count": 1,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": 3,
+          "corredor": 5,
+          "corredor_alias": "Corredor editado 233705",
+          "version": "1.0-demo",
+          "fecha_utc": "2026-11-24T23:37:05.301155-05:00"
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/consentimientos/3/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "id": 3,
+      "corredor": 5,
+      "corredor_alias": "Corredor editado 233705",
+      "version": "1.0-demo",
+      "fecha_utc": "2026-11-24T23:37:05.301155-05:00"
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/consentimientos/",
+    "enviado": {
+      "corredor": 5
+    },
+    "codigo": 400,
+    "respuesta": {
+      "corredor": [
+        "El corredor ya aceptó la versión vigente del consentimiento."
+      ]
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/reportes/",
+    "enviado": {
+      "autor": 5,
+      "zona": 6,
+      "tipo": "OBSTACULO",
+      "ubicacion": "Entrada de prueba, sin ubicación personal"
+    },
+    "codigo": 201,
+    "respuesta": {
+      "id": 3,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "tipo": "OBSTACULO",
+      "tipo_display": "Obstáculo en el camino",
+      "ubicacion": "Entrada de prueba, sin ubicación personal",
+      "fecha_utc": "2026-11-24T23:37:05.369497-05:00",
+      "estado": "PENDIENTE",
+      "estado_display": "Sin confirmar"
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/reportes/3/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "id": 3,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "tipo": "OBSTACULO",
+      "tipo_display": "Obstáculo en el camino",
+      "ubicacion": "Entrada de prueba, sin ubicación personal",
+      "fecha_utc": "2026-11-24T23:37:05.369497-05:00",
+      "estado": "PENDIENTE",
+      "estado_display": "Sin confirmar"
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/reportes/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "count": 1,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": 3,
+          "zona": 6,
+          "zona_nombre": "Zona editada 233705",
+          "tipo": "OBSTACULO",
+          "tipo_display": "Obstáculo en el camino",
+          "ubicacion": "Entrada de prueba, sin ubicación personal",
+          "fecha_utc": "2026-11-24T23:37:05.369497-05:00",
+          "estado": "PENDIENTE",
+          "estado_display": "Sin confirmar"
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "PATCH",
+    "url": "http://127.0.0.1:8000/api/reportes/3/",
+    "enviado": {
+      "tipo": "VIA"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 3,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "tipo": "VIA",
+      "tipo_display": "Vía deteriorada",
+      "ubicacion": "Entrada de prueba, sin ubicación personal",
+      "fecha_utc": "2026-11-24T23:37:05.369497-05:00",
+      "estado": "PENDIENTE",
+      "estado_display": "Sin confirmar"
+    }
+  },
+  {
+    "metodo": "PUT",
+    "url": "http://127.0.0.1:8000/api/reportes/3/",
+    "enviado": {
+      "autor": 5,
+      "zona": 6,
+      "tipo": "ILUMINACION",
+      "ubicacion": "Entrada de prueba, sin ubicación personal"
+    },
+    "codigo": 200,
+    "respuesta": {
+      "id": 3,
+      "zona": 6,
+      "zona_nombre": "Zona editada 233705",
+      "tipo": "ILUMINACION",
+      "tipo_display": "Iluminación deficiente",
+      "ubicacion": "Entrada de prueba, sin ubicación personal",
+      "fecha_utc": "2026-11-24T23:37:05.369497-05:00",
+      "estado": "PENDIENTE",
+      "estado_display": "Sin confirmar"
+    }
+  },
+  {
+    "metodo": "PATCH",
+    "url": "http://127.0.0.1:8000/api/reportes/3/",
+    "enviado": {
+      "ubicacion": "x"
+    },
+    "codigo": 400,
+    "respuesta": {
+      "ubicacion": [
+        "Describe la ubicación con al menos 5 caracteres."
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/rutas/recomendar/?zona=6&km=5&hora=10:00",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": [
+      {
+        "id": 8,
+        "zona": 6,
+        "zona_nombre": "Zona editada 233705",
+        "nombre": "Ruta PUT",
+        "km": "5.00",
+        "desnivel": 25,
+        "superficie": "Mixta",
+        "dificultad": "Baja",
+        "iluminacion": 80,
+        "afluencia": 70,
+        "apoyo": 60,
+        "incidentes_base": 0,
+        "indice": 80,
+        "aportes": [
+          {
+            "factor": "Iluminación",
+            "valor": 24.0
+          },
+          {
+            "factor": "Afluencia",
+            "valor": 14.0
+          },
+          {
+            "factor": "Incidentes",
+            "valor": 23.5
+          },
+          {
+            "factor": "Puntos de apoyo",
+            "valor": 9.0
+          },
+          {
+            "factor": "Hora de salida",
+            "valor": 9.0
+          }
+        ],
+        "evaluacion": 12,
+        "fecha_calculo": "2026-11-25T04:37:05.452585Z",
+        "aviso": "Índice orientativo calculado con datos sintéticos."
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/evaluaciones/12/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "id": 12,
+      "ruta": 8,
+      "ruta_nombre": "Ruta PUT",
+      "indice": 80,
+      "hora_salida": "10:00:00",
+      "fecha_utc": "2026-11-24T23:37:05.452585-05:00",
+      "aportes": [
+        {
+          "valor": 24.0,
+          "factor": "Iluminación"
+        },
+        {
+          "valor": 14.0,
+          "factor": "Afluencia"
+        },
+        {
+          "valor": 23.5,
+          "factor": "Incidentes"
+        },
+        {
+          "valor": 9.0,
+          "factor": "Puntos de apoyo"
+        },
+        {
+          "valor": 9.0,
+          "factor": "Hora de salida"
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/evaluaciones/",
+    "enviado": null,
+    "codigo": 200,
+    "respuesta": {
+      "count": 10,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": 12,
+          "ruta": 8,
+          "ruta_nombre": "Ruta PUT",
+          "indice": 80,
+          "hora_salida": "10:00:00",
+          "fecha_utc": "2026-11-24T23:37:05.452585-05:00",
+          "aportes": [
+            {
+              "valor": 24.0,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 14.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 23.5,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "ruta": 3,
+          "ruta_nombre": "Recorrido del sector norte",
+          "indice": 55,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:36:34.416044-05:00",
+          "aportes": [
+            {
+              "valor": 15.6,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 17.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "ruta": 2,
+          "ruta_nombre": "Vuelta junto al río",
+          "indice": 71,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:36:34.414266-05:00",
+          "aportes": [
+            {
+              "valor": 19.5,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 14.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 25.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 7.5,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "ruta": 1,
+          "ruta_nombre": "Circuito del parque",
+          "indice": 78,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:36:34.408869-05:00",
+          "aportes": [
+            {
+              "valor": 25.5,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 16.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 21.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 10.5,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "ruta": 3,
+          "ruta_nombre": "Recorrido del sector norte",
+          "indice": 55,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:33:34.458485-05:00",
+          "aportes": [
+            {
+              "valor": 15.6,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 17.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "ruta": 2,
+          "ruta_nombre": "Vuelta junto al río",
+          "indice": 71,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:33:34.457266-05:00",
+          "aportes": [
+            {
+              "valor": 19.5,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 14.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 25.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 7.5,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "ruta": 1,
+          "ruta_nombre": "Circuito del parque",
+          "indice": 78,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:33:34.455793-05:00",
+          "aportes": [
+            {
+              "valor": 25.5,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 16.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 21.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 10.5,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "ruta": 3,
+          "ruta_nombre": "Recorrido del sector norte",
+          "indice": 55,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:33:10.778235-05:00",
+          "aportes": [
+            {
+              "valor": 15.6,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 17.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 9.0,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "ruta": 2,
+          "ruta_nombre": "Vuelta junto al río",
+          "indice": 71,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:33:10.776968-05:00",
+          "aportes": [
+            {
+              "valor": 19.5,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 14.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 25.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 7.5,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "ruta": 1,
+          "ruta_nombre": "Circuito del parque",
+          "indice": 78,
+          "hora_salida": "06:00:00",
+          "fecha_utc": "2026-11-24T23:33:10.775671-05:00",
+          "aportes": [
+            {
+              "valor": 25.5,
+              "factor": "Iluminación"
+            },
+            {
+              "valor": 16.0,
+              "factor": "Afluencia"
+            },
+            {
+              "valor": 21.0,
+              "factor": "Incidentes"
+            },
+            {
+              "valor": 10.5,
+              "factor": "Puntos de apoyo"
+            },
+            {
+              "valor": 4.5,
+              "factor": "Hora de salida"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/evaluaciones/",
+    "enviado": {},
+    "codigo": 405,
+    "respuesta": {
+      "detail": "Método \"POST\" no permitido."
+    }
+  },
+  {
+    "metodo": "PATCH",
+    "url": "http://127.0.0.1:8000/api/consentimientos/3/",
+    "enviado": {
+      "version": "otra"
+    },
+    "codigo": 405,
+    "respuesta": {
+      "detail": "Método \"PATCH\" no permitido."
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/zonas/6/",
+    "enviado": null,
+    "codigo": 400,
+    "respuesta": {
+      "detail": "No se puede eliminar: la zona tiene rutas o reportes."
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/corredores/5/",
+    "enviado": null,
+    "codigo": 400,
+    "respuesta": {
+      "detail": "No se puede eliminar: el corredor tiene reportes registrados."
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/consentimientos/3/",
+    "enviado": null,
+    "codigo": 204,
+    "respuesta": null
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/consentimientos/3/",
+    "enviado": null,
+    "codigo": 404,
+    "respuesta": {
+      "detail": "No Consentimiento matches the given query."
+    }
+  },
+  {
+    "metodo": "POST",
+    "url": "http://127.0.0.1:8000/api/reportes/",
+    "enviado": {
+      "autor": 5,
+      "zona": 6,
+      "tipo": "OBSTACULO",
+      "ubicacion": "Entrada de prueba, sin ubicación personal"
+    },
+    "codigo": 400,
+    "respuesta": {
+      "autor": [
+        "El corredor debe aceptar el consentimiento de ubicación antes de reportar."
+      ]
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/reportes/3/",
+    "enviado": null,
+    "codigo": 204,
+    "respuesta": null
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/reportes/3/",
+    "enviado": null,
+    "codigo": 404,
+    "respuesta": {
+      "detail": "No ReporteIncidente matches the given query."
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/rutas/8/",
+    "enviado": null,
+    "codigo": 204,
+    "respuesta": null
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/rutas/8/",
+    "enviado": null,
+    "codigo": 404,
+    "respuesta": {
+      "detail": "No Ruta matches the given query."
+    }
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/evaluaciones/12/",
+    "enviado": null,
+    "codigo": 404,
+    "respuesta": {
+      "detail": "No EvaluacionRuta matches the given query."
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/corredores/5/",
+    "enviado": null,
+    "codigo": 204,
+    "respuesta": null
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/corredores/5/",
+    "enviado": null,
+    "codigo": 404,
+    "respuesta": {
+      "detail": "No Corredor matches the given query."
+    }
+  },
+  {
+    "metodo": "DELETE",
+    "url": "http://127.0.0.1:8000/api/zonas/6/",
+    "enviado": null,
+    "codigo": 204,
+    "respuesta": null
+  },
+  {
+    "metodo": "GET",
+    "url": "http://127.0.0.1:8000/api/zonas/6/",
+    "enviado": null,
+    "codigo": 404,
+    "respuesta": {
+      "detail": "No Zona matches the given query."
+    }
+  }
+]

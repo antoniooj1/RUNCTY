@@ -1,0 +1,1726 @@
+openapi: 3.0.3
+info:
+  title: API RUNCTY
+  version: 1.0.0
+  description: Backend Django REST del proyecto RUNCTY.
+paths:
+  /api/consentimientos/:
+    get:
+      operationId: consentimientos_list
+      description: Aceptar (POST), consultar y revocar (DELETE) el consentimiento.
+        No se edita.
+      parameters:
+      - in: query
+        name: corredor
+        schema:
+          type: integer
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      - in: query
+        name: version
+        schema:
+          type: string
+      tags:
+      - consentimientos
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedConsentimientoList'
+          description: ''
+    post:
+      operationId: consentimientos_create
+      description: Aceptar (POST), consultar y revocar (DELETE) el consentimiento.
+        No se edita.
+      tags:
+      - consentimientos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Consentimiento'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Consentimiento'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Consentimiento'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Consentimiento'
+          description: ''
+  /api/consentimientos/{id}/:
+    get:
+      operationId: consentimientos_retrieve
+      description: Aceptar (POST), consultar y revocar (DELETE) el consentimiento.
+        No se edita.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este consentimiento.
+        required: true
+      tags:
+      - consentimientos
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Consentimiento'
+          description: ''
+    delete:
+      operationId: consentimientos_destroy
+      description: Aceptar (POST), consultar y revocar (DELETE) el consentimiento.
+        No se edita.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este consentimiento.
+        required: true
+      tags:
+      - consentimientos
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/corredores/:
+    get:
+      operationId: corredores_list
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      tags:
+      - corredores
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCorredorList'
+          description: ''
+    post:
+      operationId: corredores_create
+      tags:
+      - corredores
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Corredor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Corredor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Corredor'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Corredor'
+          description: ''
+  /api/corredores/{id}/:
+    get:
+      operationId: corredores_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este corredor.
+        required: true
+      tags:
+      - corredores
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Corredor'
+          description: ''
+    put:
+      operationId: corredores_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este corredor.
+        required: true
+      tags:
+      - corredores
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Corredor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Corredor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Corredor'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Corredor'
+          description: ''
+    patch:
+      operationId: corredores_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este corredor.
+        required: true
+      tags:
+      - corredores
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedCorredor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedCorredor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedCorredor'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Corredor'
+          description: ''
+    delete:
+      operationId: corredores_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este corredor.
+        required: true
+      tags:
+      - corredores
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/evaluaciones/:
+    get:
+      operationId: evaluaciones_list
+      description: Historial de índices calculados (se crean al recomendar).
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - in: query
+        name: ruta
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      tags:
+      - evaluaciones
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedEvaluacionRutaList'
+          description: ''
+  /api/evaluaciones/{id}/:
+    get:
+      operationId: evaluaciones_retrieve
+      description: Historial de índices calculados (se crean al recomendar).
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este evaluación de ruta.
+        required: true
+      tags:
+      - evaluaciones
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EvaluacionRuta'
+          description: ''
+  /api/reportes/:
+    get:
+      operationId: reportes_list
+      description: 'RU-52: reportes de peligro. La respuesta nunca incluye al autor.'
+      parameters:
+      - in: query
+        name: estado
+        schema:
+          type: string
+          enum:
+          - PENDIENTE
+        description: '* `PENDIENTE` - Sin confirmar'
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      - in: query
+        name: tipo
+        schema:
+          type: string
+          enum:
+          - ILUMINACION
+          - OBSTACULO
+          - VIA
+        description: |-
+          * `ILUMINACION` - Iluminación deficiente
+          * `OBSTACULO` - Obstáculo en el camino
+          * `VIA` - Vía deteriorada
+      - in: query
+        name: zona
+        schema:
+          type: integer
+      tags:
+      - reportes
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedReporteIncidenteList'
+          description: ''
+    post:
+      operationId: reportes_create
+      description: 'RU-52: reportes de peligro. La respuesta nunca incluye al autor.'
+      tags:
+      - reportes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReporteIncidente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ReporteIncidente'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ReporteIncidente'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReporteIncidente'
+          description: ''
+  /api/reportes/{id}/:
+    get:
+      operationId: reportes_retrieve
+      description: 'RU-52: reportes de peligro. La respuesta nunca incluye al autor.'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este reporte de incidente.
+        required: true
+      tags:
+      - reportes
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReporteIncidente'
+          description: ''
+    put:
+      operationId: reportes_update
+      description: 'RU-52: reportes de peligro. La respuesta nunca incluye al autor.'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este reporte de incidente.
+        required: true
+      tags:
+      - reportes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReporteIncidente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ReporteIncidente'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ReporteIncidente'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReporteIncidente'
+          description: ''
+    patch:
+      operationId: reportes_partial_update
+      description: 'RU-52: reportes de peligro. La respuesta nunca incluye al autor.'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este reporte de incidente.
+        required: true
+      tags:
+      - reportes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedReporteIncidente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedReporteIncidente'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedReporteIncidente'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReporteIncidente'
+          description: ''
+    delete:
+      operationId: reportes_destroy
+      description: 'RU-52: reportes de peligro. La respuesta nunca incluye al autor.'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este reporte de incidente.
+        required: true
+      tags:
+      - reportes
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/rutas/:
+    get:
+      operationId: rutas_list
+      parameters:
+      - in: query
+        name: dificultad
+        schema:
+          type: string
+          enum:
+          - Alta
+          - Baja
+          - Media
+        description: |-
+          * `Baja` - Baja
+          * `Media` - Media
+          * `Alta` - Alta
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      - in: query
+        name: superficie
+        schema:
+          type: string
+          enum:
+          - Mixta
+          - Pavimento
+          - Tierra
+        description: |-
+          * `Pavimento` - Pavimento
+          * `Mixta` - Mixta
+          * `Tierra` - Tierra
+      - in: query
+        name: zona
+        schema:
+          type: integer
+      tags:
+      - rutas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedRutaList'
+          description: ''
+    post:
+      operationId: rutas_create
+      tags:
+      - rutas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ruta'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Ruta'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Ruta'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ruta'
+          description: ''
+  /api/rutas/{id}/:
+    get:
+      operationId: rutas_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este ruta.
+        required: true
+      tags:
+      - rutas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ruta'
+          description: ''
+    put:
+      operationId: rutas_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este ruta.
+        required: true
+      tags:
+      - rutas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ruta'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Ruta'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Ruta'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ruta'
+          description: ''
+    patch:
+      operationId: rutas_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este ruta.
+        required: true
+      tags:
+      - rutas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedRuta'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedRuta'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedRuta'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ruta'
+          description: ''
+    delete:
+      operationId: rutas_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este ruta.
+        required: true
+      tags:
+      - rutas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/rutas/recomendar/:
+    get:
+      operationId: rutas_recomendar_list
+      description: 'RU-02 y RU-07: hasta 3 rutas de la zona a ±0,5 km, ordenadas por
+        índice de seguridad.'
+      parameters:
+      - in: query
+        name: dificultad
+        schema:
+          type: string
+          enum:
+          - Alta
+          - Baja
+          - Media
+        description: |-
+          * `Baja` - Baja
+          * `Media` - Media
+          * `Alta` - Alta
+      - in: query
+        name: hora
+        schema:
+          type: string
+        description: HH:MM
+        required: true
+      - in: query
+        name: km
+        schema:
+          type: number
+          format: double
+        required: true
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      - in: query
+        name: superficie
+        schema:
+          type: string
+          enum:
+          - Mixta
+          - Pavimento
+          - Tierra
+        description: |-
+          * `Pavimento` - Pavimento
+          * `Mixta` - Mixta
+          * `Tierra` - Tierra
+      - in: query
+        name: zona
+        schema:
+          type: integer
+        required: true
+      tags:
+      - rutas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedRutaRecomendadaList'
+          description: ''
+  /api/schema/:
+    get:
+      operationId: schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - ug
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - schema
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/zonas/:
+    get:
+      operationId: zonas_list
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Qué campo usar para ordenar los resultados.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Un número de página dentro del conjunto de resultados paginado.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: Un término de búsqueda.
+        schema:
+          type: string
+      tags:
+      - zonas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedZonaList'
+          description: ''
+    post:
+      operationId: zonas_create
+      tags:
+      - zonas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Zona'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Zona'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Zona'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Zona'
+          description: ''
+  /api/zonas/{id}/:
+    get:
+      operationId: zonas_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este zona.
+        required: true
+      tags:
+      - zonas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Zona'
+          description: ''
+    put:
+      operationId: zonas_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este zona.
+        required: true
+      tags:
+      - zonas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Zona'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Zona'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Zona'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Zona'
+          description: ''
+    patch:
+      operationId: zonas_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este zona.
+        required: true
+      tags:
+      - zonas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedZona'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedZona'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedZona'
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Zona'
+          description: ''
+    delete:
+      operationId: zonas_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: Un valor de entero único que identifique este zona.
+        required: true
+      tags:
+      - zonas
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    Consentimiento:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        corredor:
+          type: integer
+        corredor_alias:
+          type: string
+          readOnly: true
+        version:
+          type: string
+          readOnly: true
+        fecha_utc:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - corredor
+      - corredor_alias
+      - fecha_utc
+      - id
+      - version
+    Corredor:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        alias:
+          type: string
+          maxLength: 60
+        consentimiento_vigente:
+          type: boolean
+          readOnly: true
+      required:
+      - alias
+      - consentimiento_vigente
+      - id
+    DificultadEnum:
+      enum:
+      - Baja
+      - Media
+      - Alta
+      type: string
+      description: |-
+        * `Baja` - Baja
+        * `Media` - Media
+        * `Alta` - Alta
+    EstadoEnum:
+      enum:
+      - PENDIENTE
+      type: string
+      description: '* `PENDIENTE` - Sin confirmar'
+    EvaluacionRuta:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        ruta:
+          type: integer
+          readOnly: true
+        ruta_nombre:
+          type: string
+          readOnly: true
+        indice:
+          type: integer
+          readOnly: true
+        hora_salida:
+          type: string
+          format: time
+          readOnly: true
+        fecha_utc:
+          type: string
+          format: date-time
+          readOnly: true
+        aportes:
+          readOnly: true
+      required:
+      - aportes
+      - fecha_utc
+      - hora_salida
+      - id
+      - indice
+      - ruta
+      - ruta_nombre
+    PaginatedConsentimientoList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Consentimiento'
+    PaginatedCorredorList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Corredor'
+    PaginatedEvaluacionRutaList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvaluacionRuta'
+    PaginatedReporteIncidenteList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReporteIncidente'
+    PaginatedRutaList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ruta'
+    PaginatedRutaRecomendadaList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/RutaRecomendada'
+    PaginatedZonaList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Zona'
+    PatchedCorredor:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        alias:
+          type: string
+          maxLength: 60
+        consentimiento_vigente:
+          type: boolean
+          readOnly: true
+    PatchedReporteIncidente:
+      type: object
+      description: 'RU-52: el autor se recibe al crear pero nunca se devuelve (proyección
+        pública).'
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        autor:
+          type: integer
+          writeOnly: true
+        zona:
+          type: integer
+        zona_nombre:
+          type: string
+          readOnly: true
+        tipo:
+          $ref: '#/components/schemas/TipoEnum'
+        tipo_display:
+          type: string
+          readOnly: true
+        ubicacion:
+          type: string
+          maxLength: 150
+        fecha_utc:
+          type: string
+          format: date-time
+          readOnly: true
+        estado:
+          allOf:
+          - $ref: '#/components/schemas/EstadoEnum'
+          readOnly: true
+        estado_display:
+          type: string
+          readOnly: true
+    PatchedRuta:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        zona:
+          type: integer
+        zona_nombre:
+          type: string
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 120
+        km:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,3}(?:\.\d{0,2})?$
+        desnivel:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+          description: Desnivel acumulado en metros
+        superficie:
+          $ref: '#/components/schemas/SuperficieEnum'
+        dificultad:
+          $ref: '#/components/schemas/DificultadEnum'
+        iluminacion:
+          type: integer
+          maximum: 100
+          minimum: 0
+        afluencia:
+          type: integer
+          maximum: 100
+          minimum: 0
+        apoyo:
+          type: integer
+          maximum: 100
+          minimum: 0
+        incidentes_base:
+          type: integer
+          maximum: 65535
+          minimum: 0
+    PatchedZona:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 80
+        total_rutas:
+          type: integer
+          readOnly: true
+    ReporteIncidente:
+      type: object
+      description: 'RU-52: el autor se recibe al crear pero nunca se devuelve (proyección
+        pública).'
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        autor:
+          type: integer
+          writeOnly: true
+        zona:
+          type: integer
+        zona_nombre:
+          type: string
+          readOnly: true
+        tipo:
+          $ref: '#/components/schemas/TipoEnum'
+        tipo_display:
+          type: string
+          readOnly: true
+        ubicacion:
+          type: string
+          maxLength: 150
+        fecha_utc:
+          type: string
+          format: date-time
+          readOnly: true
+        estado:
+          allOf:
+          - $ref: '#/components/schemas/EstadoEnum'
+          readOnly: true
+        estado_display:
+          type: string
+          readOnly: true
+      required:
+      - autor
+      - estado
+      - estado_display
+      - fecha_utc
+      - id
+      - tipo
+      - tipo_display
+      - ubicacion
+      - zona
+      - zona_nombre
+    Ruta:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        zona:
+          type: integer
+        zona_nombre:
+          type: string
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 120
+        km:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,3}(?:\.\d{0,2})?$
+        desnivel:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+          description: Desnivel acumulado en metros
+        superficie:
+          $ref: '#/components/schemas/SuperficieEnum'
+        dificultad:
+          $ref: '#/components/schemas/DificultadEnum'
+        iluminacion:
+          type: integer
+          maximum: 100
+          minimum: 0
+        afluencia:
+          type: integer
+          maximum: 100
+          minimum: 0
+        apoyo:
+          type: integer
+          maximum: 100
+          minimum: 0
+        incidentes_base:
+          type: integer
+          maximum: 65535
+          minimum: 0
+      required:
+      - afluencia
+      - apoyo
+      - desnivel
+      - dificultad
+      - id
+      - iluminacion
+      - km
+      - nombre
+      - superficie
+      - zona
+      - zona_nombre
+    RutaRecomendada:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        zona:
+          type: integer
+        zona_nombre:
+          type: string
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 120
+        km:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,3}(?:\.\d{0,2})?$
+        desnivel:
+          type: integer
+          maximum: 4294967295
+          minimum: 0
+          format: int64
+          description: Desnivel acumulado en metros
+        superficie:
+          $ref: '#/components/schemas/SuperficieEnum'
+        dificultad:
+          $ref: '#/components/schemas/DificultadEnum'
+        iluminacion:
+          type: integer
+          maximum: 100
+          minimum: 0
+        afluencia:
+          type: integer
+          maximum: 100
+          minimum: 0
+        apoyo:
+          type: integer
+          maximum: 100
+          minimum: 0
+        incidentes_base:
+          type: integer
+          maximum: 65535
+          minimum: 0
+        indice:
+          type: integer
+          readOnly: true
+        aportes:
+          readOnly: true
+        evaluacion:
+          type: integer
+          readOnly: true
+        fecha_calculo:
+          type: string
+          format: date-time
+          readOnly: true
+        aviso:
+          type: string
+          readOnly: true
+      required:
+      - afluencia
+      - aportes
+      - apoyo
+      - aviso
+      - desnivel
+      - dificultad
+      - evaluacion
+      - fecha_calculo
+      - id
+      - iluminacion
+      - indice
+      - km
+      - nombre
+      - superficie
+      - zona
+      - zona_nombre
+    SuperficieEnum:
+      enum:
+      - Pavimento
+      - Mixta
+      - Tierra
+      type: string
+      description: |-
+        * `Pavimento` - Pavimento
+        * `Mixta` - Mixta
+        * `Tierra` - Tierra
+    TipoEnum:
+      enum:
+      - ILUMINACION
+      - OBSTACULO
+      - VIA
+      type: string
+      description: |-
+        * `ILUMINACION` - Iluminación deficiente
+        * `OBSTACULO` - Obstáculo en el camino
+        * `VIA` - Vía deteriorada
+    Zona:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre:
+          type: string
+          maxLength: 80
+        total_rutas:
+          type: integer
+          readOnly: true
+      required:
+      - id
+      - nombre
+      - total_rutas
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid

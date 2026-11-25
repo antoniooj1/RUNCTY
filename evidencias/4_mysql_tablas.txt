@@ -1,0 +1,8 @@
+12 objects imported automatically (use -v 2 for details).
+
+Tablas RUNCTY en MySQL: ['runcty_consentimiento', 'runcty_corredor', 'runcty_evaluacionruta', 'runcty_reporteincidente', 'runcty_ruta', 'runcty_zona']
+1 Circuito del parque 4.70 Baja
+2 Vuelta junto al río 5.00 Media
+3 Recorrido del sector norte 5.30 Media
+4 Ruta larga de Jipiro 8.20 Alta
+5 Circuito de La Tebaida 3.90 Baja
